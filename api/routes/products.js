@@ -13,9 +13,12 @@ router.post('/', (req, res, next) => {
   });
 });
 
-router.get('/:productId', (req, rest, next) => {
+router.get('/:productId', (req, res, next) => {
   const id = req.params.productId;
-  // to fill
+  res.status(200).json({
+    message: 'product details',
+    productId: id
+  })
 });
 
 
